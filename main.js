@@ -16,6 +16,8 @@ const camera = new THREE.PerspectiveCamera(
   0.1, //near
   2000 //far
 );
+// camera.position.set(0, 0, 200);
+
 camera.position.set(0, -200, 200);
 
 camera.rotation.x = (46 * Math.PI) / 180;
@@ -101,7 +103,6 @@ const cubeDistance = 0;
 const gridCube = new Array(gridSize);
 
 const geometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-// const geometry = new THREE.SphereGeometry(cubeSize, 32, 32);
 const material = new THREE.MeshPhysicalMaterial({
   color: 0xffffff,
   // clearcoat: 0.4,
@@ -220,7 +221,7 @@ function animate() {
     wl += 0.003;
   }
 
-  console.log(wl);
+  // controls.update();
 
   renderer.render(scene, camera);
 }
@@ -228,5 +229,3 @@ function animate() {
 resetMap();
 fillMap();
 animate();
-
-console.log(gridCube[1][1].material.color);
