@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.139.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script src="main.js" type="module" defer></script>
+  <div class="canvas-container">
+    <canvas class="webgl"></canvas>
+    <!-- <div class="action-container">
+      <p class="title">
+        parametric wave
+      </p>
+    </div> -->
+  </div>
+</body>
+</html>
